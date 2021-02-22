@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6881E5BF25E375B90021D792 /* RundometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6881E5BE25E375B90021D792 /* RundometerApp.swift */; };
+		6881E5C125E375B90021D792 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6881E5C025E375B90021D792 /* ContentView.swift */; };
+		6881E5C325E375B90021D792 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6881E5C225E375B90021D792 /* Assets.xcassets */; };
+		6881E5C625E375B90021D792 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6881E5C525E375B90021D792 /* Preview Assets.xcassets */; };
+		6881E5D125E375BA0021D792 /* RundometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6881E5D025E375BA0021D792 /* RundometerTests.swift */; };
+		6881E5DC25E375BA0021D792 /* RundometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6881E5DB25E375BA0021D792 /* RundometerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6881E5CD25E375BA0021D792 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6881E5B325E375B90021D792 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6881E5BA25E375B90021D792;
+			remoteInfo = Rundometer;
+		};
+		6881E5D825E375BA0021D792 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6881E5B325E375B90021D792 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6881E5BA25E375B90021D792;
+			remoteInfo = Rundometer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6881E5BB25E375B90021D792 /* Rundometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rundometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6881E5BE25E375B90021D792 /* RundometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RundometerApp.swift; sourceTree = "<group>"; };
+		6881E5C025E375B90021D792 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6881E5C225E375B90021D792 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6881E5C525E375B90021D792 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6881E5C725E375B90021D792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6881E5CC25E375BA0021D792 /* RundometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RundometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6881E5D025E375BA0021D792 /* RundometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RundometerTests.swift; sourceTree = "<group>"; };
+		6881E5D225E375BA0021D792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6881E5D725E375BA0021D792 /* RundometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RundometerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6881E5DB25E375BA0021D792 /* RundometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RundometerUITests.swift; sourceTree = "<group>"; };
+		6881E5DD25E375BA0021D792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6881E5B825E375B90021D792 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6881E5C925E375BA0021D792 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6881E5D425E375BA0021D792 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6881E5B225E375B90021D792 = {
+			isa = PBXGroup;
+			children = (
+				6881E5BD25E375B90021D792 /* Rundometer */,
+				6881E5CF25E375BA0021D792 /* RundometerTests */,
+				6881E5DA25E375BA0021D792 /* RundometerUITests */,
+				6881E5BC25E375B90021D792 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6881E5BC25E375B90021D792 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6881E5BB25E375B90021D792 /* Rundometer.app */,
+				6881E5CC25E375BA0021D792 /* RundometerTests.xctest */,
+				6881E5D725E375BA0021D792 /* RundometerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6881E5BD25E375B90021D792 /* Rundometer */ = {
+			isa = PBXGroup;
+			children = (
+				6881E5BE25E375B90021D792 /* RundometerApp.swift */,
+				6881E5C025E375B90021D792 /* ContentView.swift */,
+				6881E5C225E375B90021D792 /* Assets.xcassets */,
+				6881E5C725E375B90021D792 /* Info.plist */,
+				6881E5C425E375B90021D792 /* Preview Content */,
+			);
+			path = Rundometer;
+			sourceTree = "<group>";
+		};
+		6881E5C425E375B90021D792 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6881E5C525E375B90021D792 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6881E5CF25E375BA0021D792 /* RundometerTests */ = {
+			isa = PBXGroup;
+			children = (
+				6881E5D025E375BA0021D792 /* RundometerTests.swift */,
+				6881E5D225E375BA0021D792 /* Info.plist */,
+			);
+			path = RundometerTests;
+			sourceTree = "<group>";
+		};
+		6881E5DA25E375BA0021D792 /* RundometerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6881E5DB25E375BA0021D792 /* RundometerUITests.swift */,
+				6881E5DD25E375BA0021D792 /* Info.plist */,
+			);
+			path = RundometerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6881E5BA25E375B90021D792 /* Rundometer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6881E5E025E375BA0021D792 /* Build configuration list for PBXNativeTarget "Rundometer" */;
+			buildPhases = (
+				6881E5B725E375B90021D792 /* Sources */,
+				6881E5B825E375B90021D792 /* Frameworks */,
+				6881E5B925E375B90021D792 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rundometer;
+			productName = Rundometer;
+			productReference = 6881E5BB25E375B90021D792 /* Rundometer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6881E5CB25E375BA0021D792 /* RundometerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6881E5E325E375BA0021D792 /* Build configuration list for PBXNativeTarget "RundometerTests" */;
+			buildPhases = (
+				6881E5C825E375BA0021D792 /* Sources */,
+				6881E5C925E375BA0021D792 /* Frameworks */,
+				6881E5CA25E375BA0021D792 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6881E5CE25E375BA0021D792 /* PBXTargetDependency */,
+			);
+			name = RundometerTests;
+			productName = RundometerTests;
+			productReference = 6881E5CC25E375BA0021D792 /* RundometerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6881E5D625E375BA0021D792 /* RundometerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6881E5E625E375BA0021D792 /* Build configuration list for PBXNativeTarget "RundometerUITests" */;
+			buildPhases = (
+				6881E5D325E375BA0021D792 /* Sources */,
+				6881E5D425E375BA0021D792 /* Frameworks */,
+				6881E5D525E375BA0021D792 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6881E5D925E375BA0021D792 /* PBXTargetDependency */,
+			);
+			name = RundometerUITests;
+			productName = RundometerUITests;
+			productReference = 6881E5D725E375BA0021D792 /* RundometerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6881E5B325E375B90021D792 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					6881E5BA25E375B90021D792 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					6881E5CB25E375BA0021D792 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 6881E5BA25E375B90021D792;
+					};
+					6881E5D625E375BA0021D792 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 6881E5BA25E375B90021D792;
+					};
+				};
+			};
+			buildConfigurationList = 6881E5B625E375B90021D792 /* Build configuration list for PBXProject "Rundometer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6881E5B225E375B90021D792;
+			productRefGroup = 6881E5BC25E375B90021D792 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6881E5BA25E375B90021D792 /* Rundometer */,
+				6881E5CB25E375BA0021D792 /* RundometerTests */,
+				6881E5D625E375BA0021D792 /* RundometerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6881E5B925E375B90021D792 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6881E5C625E375B90021D792 /* Preview Assets.xcassets in Resources */,
+				6881E5C325E375B90021D792 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6881E5CA25E375BA0021D792 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6881E5D525E375BA0021D792 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6881E5B725E375B90021D792 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6881E5C125E375B90021D792 /* ContentView.swift in Sources */,
+				6881E5BF25E375B90021D792 /* RundometerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6881E5C825E375BA0021D792 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6881E5D125E375BA0021D792 /* RundometerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6881E5D325E375BA0021D792 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6881E5DC25E375BA0021D792 /* RundometerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6881E5CE25E375BA0021D792 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6881E5BA25E375B90021D792 /* Rundometer */;
+			targetProxy = 6881E5CD25E375BA0021D792 /* PBXContainerItemProxy */;
+		};
+		6881E5D925E375BA0021D792 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6881E5BA25E375B90021D792 /* Rundometer */;
+			targetProxy = 6881E5D825E375BA0021D792 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6881E5DE25E375BA0021D792 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6881E5DF25E375BA0021D792 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6881E5E125E375BA0021D792 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Rundometer/Preview Content\"";
+				DEVELOPMENT_TEAM = TL5T75PGX2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Rundometer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinturner.Rundometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6881E5E225E375BA0021D792 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Rundometer/Preview Content\"";
+				DEVELOPMENT_TEAM = TL5T75PGX2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Rundometer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinturner.Rundometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6881E5E425E375BA0021D792 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL5T75PGX2;
+				INFOPLIST_FILE = RundometerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinturner.RundometerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rundometer.app/Rundometer";
+			};
+			name = Debug;
+		};
+		6881E5E525E375BA0021D792 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL5T75PGX2;
+				INFOPLIST_FILE = RundometerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinturner.RundometerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rundometer.app/Rundometer";
+			};
+			name = Release;
+		};
+		6881E5E725E375BA0021D792 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL5T75PGX2;
+				INFOPLIST_FILE = RundometerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinturner.RundometerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Rundometer;
+			};
+			name = Debug;
+		};
+		6881E5E825E375BA0021D792 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL5T75PGX2;
+				INFOPLIST_FILE = RundometerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinturner.RundometerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Rundometer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6881E5B625E375B90021D792 /* Build configuration list for PBXProject "Rundometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6881E5DE25E375BA0021D792 /* Debug */,
+				6881E5DF25E375BA0021D792 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6881E5E025E375BA0021D792 /* Build configuration list for PBXNativeTarget "Rundometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6881E5E125E375BA0021D792 /* Debug */,
+				6881E5E225E375BA0021D792 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6881E5E325E375BA0021D792 /* Build configuration list for PBXNativeTarget "RundometerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6881E5E425E375BA0021D792 /* Debug */,
+				6881E5E525E375BA0021D792 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6881E5E625E375BA0021D792 /* Build configuration list for PBXNativeTarget "RundometerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6881E5E725E375BA0021D792 /* Debug */,
+				6881E5E825E375BA0021D792 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6881E5B325E375B90021D792 /* Project object */;
+}
