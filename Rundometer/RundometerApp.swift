@@ -11,7 +11,11 @@ import SwiftUI
 struct RundometerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if ActivityFetcher.shared.isAuthorized {
+                ContentView()
+            } else {
+                RequestAccessView()
+            }
         }
     }
 }

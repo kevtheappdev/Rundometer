@@ -13,6 +13,12 @@
 		6881E5C625E375B90021D792 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6881E5C525E375B90021D792 /* Preview Assets.xcassets */; };
 		6881E5D125E375BA0021D792 /* RundometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6881E5D025E375BA0021D792 /* RundometerTests.swift */; };
 		6881E5DC25E375BA0021D792 /* RundometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6881E5DB25E375BA0021D792 /* RundometerUITests.swift */; };
+		6881E5ED25E378A90021D792 /* ActivityFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6881E5EC25E378A90021D792 /* ActivityFetcher.swift */; };
+		6881E5F425E37B860021D792 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6881E5F325E37B860021D792 /* HealthKit.framework */; };
+		689D82C325E44D4E00E28872 /* RequestAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D82C225E44D4E00E28872 /* RequestAccessView.swift */; };
+		689D82C525E46D2F00E28872 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D82C425E46D2F00E28872 /* Extensions.swift */; };
+		689D82C925E484D800E28872 /* GoalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D82C825E484D800E28872 /* GoalManager.swift */; };
+		689D82CB25E48D8100E28872 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D82CA25E48D8100E28872 /* ProgressCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,13 @@
 		6881E5D725E375BA0021D792 /* RundometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RundometerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6881E5DB25E375BA0021D792 /* RundometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RundometerUITests.swift; sourceTree = "<group>"; };
 		6881E5DD25E375BA0021D792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6881E5EC25E378A90021D792 /* ActivityFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFetcher.swift; sourceTree = "<group>"; };
+		6881E5F125E37B860021D792 /* Rundometer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rundometer.entitlements; sourceTree = "<group>"; };
+		6881E5F325E37B860021D792 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		689D82C225E44D4E00E28872 /* RequestAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAccessView.swift; sourceTree = "<group>"; };
+		689D82C425E46D2F00E28872 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		689D82C825E484D800E28872 /* GoalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalManager.swift; sourceTree = "<group>"; };
+		689D82CA25E48D8100E28872 /* ProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6881E5F425E37B860021D792 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +93,7 @@
 				6881E5CF25E375BA0021D792 /* RundometerTests */,
 				6881E5DA25E375BA0021D792 /* RundometerUITests */,
 				6881E5BC25E375B90021D792 /* Products */,
+				6881E5F225E37B860021D792 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +110,17 @@
 		6881E5BD25E375B90021D792 /* Rundometer */ = {
 			isa = PBXGroup;
 			children = (
+				6881E5F125E37B860021D792 /* Rundometer.entitlements */,
 				6881E5BE25E375B90021D792 /* RundometerApp.swift */,
+				689D82C225E44D4E00E28872 /* RequestAccessView.swift */,
+				689D82C825E484D800E28872 /* GoalManager.swift */,
 				6881E5C025E375B90021D792 /* ContentView.swift */,
 				6881E5C225E375B90021D792 /* Assets.xcassets */,
 				6881E5C725E375B90021D792 /* Info.plist */,
 				6881E5C425E375B90021D792 /* Preview Content */,
+				6881E5EC25E378A90021D792 /* ActivityFetcher.swift */,
+				689D82CA25E48D8100E28872 /* ProgressCircle.swift */,
+				689D82C425E46D2F00E28872 /* Extensions.swift */,
 			);
 			path = Rundometer;
 			sourceTree = "<group>";
@@ -128,6 +149,14 @@
 				6881E5DD25E375BA0021D792 /* Info.plist */,
 			);
 			path = RundometerUITests;
+			sourceTree = "<group>";
+		};
+		6881E5F225E37B860021D792 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6881E5F325E37B860021D792 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689D82C525E46D2F00E28872 /* Extensions.swift in Sources */,
+				689D82C325E44D4E00E28872 /* RequestAccessView.swift in Sources */,
 				6881E5C125E375B90021D792 /* ContentView.swift in Sources */,
 				6881E5BF25E375B90021D792 /* RundometerApp.swift in Sources */,
+				689D82CB25E48D8100E28872 /* ProgressCircle.swift in Sources */,
+				689D82C925E484D800E28872 /* GoalManager.swift in Sources */,
+				6881E5ED25E378A90021D792 /* ActivityFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Rundometer/Rundometer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Rundometer/Preview Content\"";
 				DEVELOPMENT_TEAM = TL5T75PGX2;
@@ -439,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Rundometer/Rundometer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Rundometer/Preview Content\"";
 				DEVELOPMENT_TEAM = TL5T75PGX2;
