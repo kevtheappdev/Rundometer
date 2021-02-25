@@ -32,3 +32,9 @@ extension Date {
         return startOfMonth
     }
 }
+
+extension Double {
+    func roundToTwoDecimals() -> Double{
+        return (self * 100).rounded(.down) / 100
+    }
+}

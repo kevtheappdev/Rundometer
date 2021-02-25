@@ -62,27 +62,13 @@ public class ActivityFetcher {
         }
     }
     
-    public func distanceWalked(sinceDate: Date, completion: @escaping (Result<Double, ActivityFetcherError>) -> Void) {
+    public func distance(_ activityType: HKWorkoutActivityType,sinceDate: Date, completion: @escaping (Result<Double, ActivityFetcherError>) -> Void) {
         if !isAuthorized {
             completion(.failure(.authorizationError(nil)))
             return
         }
         
-        let predicate = HKQuery.predicateForWorkouts(with: .walking)
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        
-        executeWorkoutQuery(withPredicate: predicate, sortDescriptors: [sortDescriptor], completion: {(result) in
-            completion(result.map { self.totalWorkoutDistances($0, sinceDate: sinceDate) })
-        })
-    }
-    
-    public func distanceRan(sinceDate: Date, completion: @escaping (Result<Double, ActivityFetcherError>) -> Void) {
-        if !isAuthorized {
-            completion(.failure(.authorizationError(nil)))
-            return
-        }
-        
-        let predicate = HKQuery.predicateForWorkouts(with: .running)
+        let predicate = HKQuery.predicateForWorkouts(with: activityType)
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
         
         executeWorkoutQuery(withPredicate: predicate, sortDescriptors: [sortDescriptor], completion: {(result) in
@@ -97,7 +83,7 @@ public class ActivityFetcher {
             }
             return 0
         }.filter{ $0 != 0 }
-        print(distances)
+        
         return distances.reduce(0, +)
     }
     

@@ -6,7 +6,38 @@
 //
 
 import SwiftUI
+import Combine
 import HealthKit
+
+
+struct ActivityProgressView: View {
+    var title: String
+    @Binding var showActivity: Bool
+    @Binding var milesRanPercent: Float
+    @Binding var goal: Double
+    @Binding var milesComplete: Double
+    
+    var body: some View {
+        if showActivity {
+            Section {
+                Text("\(title)")
+                    .bold()
+                    .font(.title3)
+                    
+                ProgressCircle(progress: $milesRanPercent)
+                    .frame(width: 200, height: 200)
+                    .padding()
+                Text(String(format: "%.2f of %.2f", milesComplete, goal))
+                    .bold()
+                    .font(.body)
+                    .padding()
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+        }
+    }
+}
+
 
 struct ContentView: View {
     @State var milesWalked: Double = 0.0
@@ -16,6 +47,9 @@ struct ContentView: View {
     @State var walkingGoal: Double = 0.0
     @State var runningGoal: Double = 0.0
     @State var viewType = 0
+    @State var sinceDate = Date.beginningOfCurrentYear()
+    @State var settingsPresented: Bool = false
+    @ObservedObject var goals = GoalManager.shared
     
     var body: some View {
         NavigationView {
@@ -30,110 +64,74 @@ struct ContentView: View {
                 }
                 .listRowBackground(Color(UIColor.systemGroupedBackground))
                 
-                Section {
-                    ProgressCircle(progress: $milesRanPercent)
-                        .frame(width: 200, height: 200)
-                        .padding()
-                    Text(String(format: "Miles Ran %0.0f of %0.0f", milesRan, runningGoal))
-                        .bold()
-                        .font(.body)
-                        .padding()
-                }
-                .frame(maxWidth: .infinity)
-                .padding()
+                ActivityProgressView(title: "Running", showActivity: $goals._showRunning, milesRanPercent: $milesRanPercent, goal: $runningGoal, milesComplete: $milesRan)
                 
-                Section {
-                    ProgressCircle(progress: $milesWalkedPercent)
-                        .frame(width: 200, height: 200)
-                        .padding()
-                    Text(String(format: "Miles Walked %0.0f of %0.0f", milesWalked, walkingGoal))
-                        .bold()
-                        .font(.body)
-                        .padding()
-                }
-                .frame(maxWidth: .infinity)
-                .padding()
+                ActivityProgressView(title: "Walking", showActivity: $goals._showWalking, milesRanPercent: $milesWalkedPercent, goal: $walkingGoal, milesComplete: $milesWalked)
 
             }
             .frame(maxWidth: .infinity)
             .onChange(of: viewType) { newValue in
                 if newValue == 0 {
-                    populateYearData()
+                    sinceDate = Date.beginningOfCurrentYear()
                 } else {
-                    populateMonthData()
+                    sinceDate = Date.beginningOfCurrentMonth()
                 }
             }
-            .onAppear {
-                    GoalManager.shared.runningYearlyGoal = 500
-                    GoalManager.shared.walkingYearlyGoal = 1000
-                    
-                    populateYearData()
+            .onChange(of: sinceDate) { _ in
+                loadActivity()
             }
+            .onChange(of: milesRan) { _ in
+                runningGoal = viewType == 0 ? goals.runningYearlyGoal : goals.runningMonthlyGoal
+            }
+            .onChange(of: milesWalked) { _ in
+                walkingGoal = viewType == 0 ? goals.walkingYearlyGoal : goals.walkingMonthlyGoal
+            }
+            .onChange(of: runningGoal) { _ in
+                milesRanPercent = Float(milesRan / runningGoal)
+            }
+            .onChange(of: walkingGoal) { _ in
+                milesWalkedPercent = Float(milesWalked / walkingGoal)
+            }
+            .onChange(of: goals._runningYearlyGoal) { _ in
+                runningGoal = viewType == 0 ? goals.runningYearlyGoal : goals.runningMonthlyGoal
+            }
+            .onChange(of: goals._walkingYearlyGoal) { _ in
+                walkingGoal = viewType == 0 ? goals.walkingYearlyGoal : goals.walkingMonthlyGoal
+            }
+            .onAppear {
+                loadActivity()
+            }
+            .sheet(isPresented: $settingsPresented) { SettingsView() }
             .navigationBarTitle(Text("Rundometer"))
             .navigationBarItems(trailing:
-                                Button(action: {
-                                            
-                                }) {
-                                    Image(systemName: "gear")
-                                })
-            
+                    Button(action: {
+                        self.settingsPresented.toggle()
+                    }) {
+                        Image(systemName: "gear")
+                    })
         }
     }
     
-    func populateMonthData() {
-        runningGoal = GoalManager.shared.runningMonthlyGoal
-        walkingGoal = GoalManager.shared.walkingMonthlyGoal
-        
-        GoalManager.shared.computeWalkingProgressMonth({(result) in
+    func loadActivity() {
+        // running
+        ActivityFetcher.shared.distance(.running, sinceDate: sinceDate, completion: {(result) in
             switch result {
-            case .success(let progress):
-                self.milesWalked = progress.distance
-                self.milesWalkedPercent = progress.percent
+            case .success(let distanceTotal):
+                self.milesRan = distanceTotal.roundToTwoDecimals()
                 break
-            case .failure(let error):
-                print("some error: \(error)")
-            break
+            case .failure(_):
+                break
             }
         })
         
-        GoalManager.shared.computeRunningProgressMonth({(result) in
+        // walking
+        ActivityFetcher.shared.distance(.running, sinceDate: sinceDate, completion: {(result) in
             switch result {
-            case .success(let progress):
-                self.milesRan = progress.distance
-                self.milesRanPercent = progress.percent
+            case .success(let distanceTotal):
+                self.milesWalked = distanceTotal.roundToTwoDecimals()
                 break
-            case .failure(let error):
-                print("some error: \(error)")
-            break
-            }
-        })
-    }
-    
-    func populateYearData() {
-        runningGoal = GoalManager.shared.runningYearlyGoal
-        walkingGoal = GoalManager.shared.walkingYearlyGoal
-        
-        GoalManager.shared.computeWalkingProgressYear({(result) in
-            switch result {
-            case .success(let progress):
-                self.milesWalked = progress.distance
-                self.milesWalkedPercent = progress.percent
+            case .failure(_):
                 break
-            case .failure(let error):
-                print("some error: \(error)")
-            break
-            }
-        })
-        
-        GoalManager.shared.computeRunningProgressYear({(result) in
-            switch result {
-            case .success(let progress):
-                self.milesRan = progress.distance
-                self.milesRanPercent = progress.percent
-                break
-            case .failure(let error):
-                print("some error: \(error)")
-            break
             }
         })
     }

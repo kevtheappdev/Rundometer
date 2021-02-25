@@ -19,6 +19,7 @@
 		689D82C525E46D2F00E28872 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D82C425E46D2F00E28872 /* Extensions.swift */; };
 		689D82C925E484D800E28872 /* GoalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D82C825E484D800E28872 /* GoalManager.swift */; };
 		689D82CB25E48D8100E28872 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D82CA25E48D8100E28872 /* ProgressCircle.swift */; };
+		68F49ADB25E6D965009A8885 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F49ADA25E6D965009A8885 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		689D82C425E46D2F00E28872 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		689D82C825E484D800E28872 /* GoalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalManager.swift; sourceTree = "<group>"; };
 		689D82CA25E48D8100E28872 /* ProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
+		68F49ADA25E6D965009A8885 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				6881E5C725E375B90021D792 /* Info.plist */,
 				6881E5C425E375B90021D792 /* Preview Content */,
 				6881E5EC25E378A90021D792 /* ActivityFetcher.swift */,
+				68F49ADA25E6D965009A8885 /* SettingsView.swift */,
 				689D82CA25E48D8100E28872 /* ProgressCircle.swift */,
 				689D82C425E46D2F00E28872 /* Extensions.swift */,
 			);
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				689D82C525E46D2F00E28872 /* Extensions.swift in Sources */,
+				68F49ADB25E6D965009A8885 /* SettingsView.swift in Sources */,
 				689D82C325E44D4E00E28872 /* RequestAccessView.swift in Sources */,
 				6881E5C125E375B90021D792 /* ContentView.swift in Sources */,
 				6881E5BF25E375B90021D792 /* RundometerApp.swift in Sources */,

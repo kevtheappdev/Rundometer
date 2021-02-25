@@ -14,12 +14,14 @@ struct ProgressCircle: View {
         ZStack {
             Circle()
                 .stroke(lineWidth: 20.0)
+                .fill(LinearGradient(gradient: Gradient(colors: [.red, .blue]), startPoint: .bottom, endPoint: .top))
                 .opacity(0.3)
-                .foregroundColor(Color.red)
+//                .foregroundColor(Color.blue)
+            
             Circle()
                 .trim(from: 0.0, to: CGFloat(progress))
                 .stroke(style: StrokeStyle(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
-                .foregroundColor(Color.red)
+                .fill(LinearGradient(gradient: Gradient(colors: [.red, .blue]), startPoint: .bottom, endPoint: .top))
                 .rotationEffect(Angle(degrees:  270))
                 .animation(.linear)
             Text(String(format: "%.0f %%", min(self.progress, 1.0) * 100))
